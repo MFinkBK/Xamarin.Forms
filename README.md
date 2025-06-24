@@ -1,5 +1,16 @@
 # Xamarin.Forms #
 
+----
+
+# Fork Notice
+
+Note: This is a fork of the `Xamarin.Forms` project that is used by the company
+Bittner + Krull Softwaresysteme GmbH. No support is provided for this fork.
+
+The remainder of this README is the original unmodified version of the file.
+
+----
+
 ## Support
 
 Support for Xamarin.Forms ended on **May 1, 2024** as per the [Xamarin Support Policy][xamarin-support-policy]:
