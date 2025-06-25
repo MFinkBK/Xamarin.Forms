@@ -18,10 +18,13 @@ jobs:
         dotnet-version: 9.0.x
 
     - name: Setup MSBuild
+      id: msbuild
       uses: microsoft/setup-msbuild@v2
 
     - name: Build and NuGet pack
       shell: cmd
+      env:
+        MSBUILD_EXE: steps.msbuild.outputs.foundToolPath
       run: >
         build.cmd
         -Target NugetPack
