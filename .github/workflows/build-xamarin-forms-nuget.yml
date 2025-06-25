@@ -24,7 +24,7 @@ jobs:
     - name: Build and NuGet pack
       shell: cmd
       env:
-        MSBUILD_EXE: ${{ steps.msbuild.outputs.msbuildPath }}'\msbuild.exe'
+        MSBUILD_EXE: ${{ steps.msbuild.outputs.msbuildPath }}\msbuild.exe
       run: >
         build.cmd
         -Target NugetPack
