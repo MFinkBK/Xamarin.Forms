@@ -26,9 +26,6 @@
                        Include="pr.$(SYSTEM_PULLREQUEST_PULLREQUESTNUMBER)"/>
 
       <VersionMetadata Include="sha.$(GitCommit)"/>
-
-      <VersionMetadata Condition="$(CI)"
-                       Include="azdo.$(BUILD_BUILDID)"/>
     </ItemGroup>
 
     <PropertyGroup>
