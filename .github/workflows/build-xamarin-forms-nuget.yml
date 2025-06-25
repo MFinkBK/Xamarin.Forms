@@ -22,7 +22,7 @@ jobs:
 
     - name: Build and NuGet pack
       run: >
-        build.sh
+        build.cmd
         -Target NugetPack
         -ScriptArgs '--configuration="Release"'
 
