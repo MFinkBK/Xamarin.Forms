@@ -686,23 +686,6 @@ Task("BuildForNuget")
 
         if(IsRunningOnWindows())
         {
-            msbuildSettings = GetMSBuildSettings();
-            msbuildSettings.BinaryLogger = binaryLogger;
-            binaryLogger.FileName = $"{artifactStagingDirectory}/dualscreen-{configuration}-csproj.binlog";
-            MSBuild("./Xamarin.Forms.DualScreen/Xamarin.Forms.DualScreen.csproj",
-                        msbuildSettings
-                            .WithRestore()
-                            .WithTarget("rebuild"));
-
-
-	        msbuildSettings = GetMSBuildSettings();
-	        msbuildSettings.BinaryLogger = binaryLogger;
-	        binaryLogger.FileName = $"{artifactStagingDirectory}/win-maps-{configuration}-csproj.binlog";
-	        MSBuild("./Xamarin.Forms.Maps.UWP/Xamarin.Forms.Maps.UWP.csproj",
-	                    msbuildSettings
-	                        .WithProperty("UwpMinTargetFrameworks", "uap10.0.14393")
-	                        .WithRestore());
-	
 	        msbuildSettings = GetMSBuildSettings();
 	        msbuildSettings.BinaryLogger = binaryLogger;
 	        binaryLogger.FileName = $"{artifactStagingDirectory}/win-16299-{configuration}-csproj.binlog";
@@ -713,29 +696,11 @@ Task("BuildForNuget")
 	                        .WithProperty("DisableEmbeddedXbf", "false")
 	                        .WithProperty("EnableTypeInfoReflection", "false")
 	                        .WithProperty("UwpMinTargetFrameworks", "uap10.0.16299"));
-	
-	        msbuildSettings = GetMSBuildSettings();
-	        msbuildSettings.BinaryLogger = binaryLogger;
-	        binaryLogger.FileName = $"{artifactStagingDirectory}/win-14393-{configuration}-csproj.binlog";
-	        MSBuild("./Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.csproj",
-	                    msbuildSettings
-	                        .WithRestore()
-	                        .WithTarget("rebuild")
-	                        .WithProperty("DisableEmbeddedXbf", "false")
-	                        .WithProperty("EnableTypeInfoReflection", "false")
-	                        .WithProperty("UwpMinTargetFrameworks", "uap10.0.14393"));
 
             msbuildSettings = GetMSBuildSettings();
             msbuildSettings.BinaryLogger = binaryLogger;
             binaryLogger.FileName = $"{artifactStagingDirectory}/ios-{configuration}-csproj.binlog";
             MSBuild("./Xamarin.Forms.Platform.iOS/Xamarin.Forms.Platform.iOS.csproj",
-                        msbuildSettings
-                            .WithTarget("rebuild"));
-
-            msbuildSettings = GetMSBuildSettings();
-            msbuildSettings.BinaryLogger = binaryLogger;
-            binaryLogger.FileName = $"{artifactStagingDirectory}/macos-{configuration}-csproj.binlog";
-            MSBuild("./Xamarin.Forms.Platform.MacOS/Xamarin.Forms.Platform.MacOS.csproj",
                         msbuildSettings
                             .WithTarget("rebuild"));
         }
