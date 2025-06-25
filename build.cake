@@ -633,7 +633,7 @@ Task("_NuGetPack")
         };
 
         var nugetFilePaths =
-            GetFiles("./.nuspec/*.nuspec");
+            GetFiles("./.nuspec/Xamarin.Forms.nuspec");
 
         nuGetPackSettings.Properties.Add("configuration", configuration);
         nuGetPackSettings.Properties.Add("platform", "anycpu");

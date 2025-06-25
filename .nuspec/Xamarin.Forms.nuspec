@@ -14,6 +14,8 @@
     <description>B+K build of Xamarin.Forms. Build native UIs for iOS, Android, UWP, from a single, shared C# codebase</description>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <dependencies>
+      <group targetFramework="netstandard2.0" />
+      <group targetFramework="Xamarin.iOS10" />
       <group targetFramework="MonoAndroid13.0">
         <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="[2.3.1.1,2.6.1.1]" />
         <dependency id="Xamarin.Google.Android.Material" version="[1.4.0.2,1.9)" />
@@ -77,8 +79,6 @@
     <file src="..\Xamarin.Forms.Core\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Core.*mdb" target="lib\netstandard2.0" />
     <file src="..\build\docs\Xamarin.Forms.Core.xml" target="lib\netstandard2.0" />
     <file src="..\build\docs\Xamarin.Forms.Xaml.xml" target="lib\netstandard2.0" />
-    <file src="..\build\docs\**\Xamarin.Forms.Core.xml" target="lib\netstandard2.0" />
-    <file src="..\build\docs\**\Xamarin.Forms.Xaml.xml" target="lib\netstandard2.0" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.dll" target="lib\netstandard2.0" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.*pdb" target="lib\netstandard2.0" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.*mdb" target="lib\netstandard2.0" />
@@ -153,8 +153,6 @@
     <file src="..\Xamarin.Forms.Core\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Core.*pdb" target="lib\MonoAndroid13.0" />
     <file src="..\build\docs\Xamarin.Forms.Core.xml" target="lib\MonoAndroid13.0" />
     <file src="..\build\docs\Xamarin.Forms.Xaml.xml" target="lib\MonoAndroid13.0" />
-    <file src="..\build\docs\**\Xamarin.Forms.Core.xml" target="lib\MonoAndroid13.0" />
-    <file src="..\build\docs\**\Xamarin.Forms.Xaml.xml" target="lib\MonoAndroid13.0" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.dll" target="lib\MonoAndroid13.0" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.*pdb" target="lib\MonoAndroid13.0" />
     <file src="..\Stubs\Xamarin.Forms.Platform.Android\bin\$Configuration$\MonoAndroid13.0\Xamarin.Forms.Platform.dll" target="lib\MonoAndroid13.0" />
@@ -168,8 +166,6 @@
     <file src="..\Xamarin.Forms.Core\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Core.*mdb" target="lib\Xamarin.iOS10" />
     <file src="..\build\docs\Xamarin.Forms.Core.xml" target="lib\Xamarin.iOS10" />
     <file src="..\build\docs\Xamarin.Forms.Xaml.xml" target="lib\Xamarin.iOS10" />
-    <file src="..\build\docs\**\Xamarin.Forms.Core.xml" target="lib\Xamarin.iOS10" />
-    <file src="..\build\docs\**\Xamarin.Forms.Xaml.xml" target="lib\Xamarin.iOS10" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.dll" target="lib\Xamarin.iOS10" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.*pdb" target="lib\Xamarin.iOS10" />
     <file src="..\Xamarin.Forms.Xaml\bin\$Configuration$\netstandard2.0\Xamarin.Forms.Xaml.*mdb" target="lib\Xamarin.iOS10" />
@@ -193,6 +189,7 @@
 
     <!-- VS 2017 needs these 16299-->
     <file src="..\Xamarin.Forms.Platform.UAP\obj\$Configuration$\uap10.0.16299\**\*.xaml" target="lib\uap10.0.16299\Xamarin.Forms.Platform.UAP" />
+    <file src="..\Xamarin.Forms.Platform.UAP\obj\$Configuration$\uap10.0.16299\**\*.xbf" target="lib\uap10.0.16299\Xamarin.Forms.Platform.UAP" />
 
     <!-- iOS Localized String Resource Assemblies -->
     <file src="..\Xamarin.Forms.Platform.iOS\bin\$Configuration$\ar\Xamarin.Forms.Platform.iOS.resources.dll" target="lib\Xamarin.iOS10\ar" />
