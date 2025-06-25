@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sandbox="clr-namespace:Xamarin.Forms.Core.Sample.Sandbox"
+             x:Class="Xamarin.Forms.Core.Sample.Sandbox.MainPage"
+             x:DataType="sandbox:MainPageViewModel">
+
+  <ContentPage.BindingContext>
+    <sandbox:MainPageViewModel />
+  </ContentPage.BindingContext>
+
+    <StackLayout>
+
+      <!-- Place your sample sandbox XAML code here -->
+
+    </StackLayout>
+
+</ContentPage>
